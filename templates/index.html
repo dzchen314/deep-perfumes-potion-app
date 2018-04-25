@@ -1,0 +1,48 @@
+{% from "partials/_formhelpers.html" import render_field %}
+<html>
+    {% include "partials/head.html" %}
+    <script src="{{ url_for('static', filename='libraries/jquery-autocomplete.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/docs.js') }}"></script>
+    <body>
+        <div class="row">
+            
+            <div class="col s2">
+                <img class="image" src="{{ url_for('static', filename = 'assets/potion.gif') }}"  width="100">
+                    </div>
+            
+            <div class="col s8">
+                <h2>Potion: discover your new scent</h2>
+                <form >
+                    <div class="form-group">
+                        <label class="sr-only" for="nameInput">Search by fragrance or keywords (e.g. citris or floral)</label>
+                        <input style="font-size:30px;" type="text" class="search__input" id="nameInput" placeholder="no. 5">
+                            </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <br>
+                
+                <div class="col s18">
+                    <div id="successAlert" style="display:none;"></div>
+                    
+                    <div id="searchAlert" style="font-size:15px;" type="text"></div>
+                    <ul class="collection">
+                    </ul>
+                    
+                    <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            var options = {
+                url: "static/assets/perfumes.txt",
+                list: {
+                    match: {
+                        enabled: true
+                    }
+                },
+            };
+        $("#nameInput").easyAutocomplete(options);
+            </script>
+    </body>
