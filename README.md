@@ -404,30 +404,7 @@ for word_centroid in word_centroid_list_sort:
 df = pd.DataFrame(d)
 ```
 
-We print the perfumes belonging to category 0 and find that a number of these fragrances are floral, woody, and aromatic. There is some preference for colognes and unisex perfumes.
-
-
-```python
-df.loc[df['category'] == 0]
-```
-
-
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
