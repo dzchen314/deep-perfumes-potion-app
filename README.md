@@ -815,7 +815,7 @@ plt.show()
 ```
 
 
-![png](output_46_0.png)
+![png](Kmeans.png)
 
 
 The docvectors form a large continuous blob in this PCA-reduced space. Kmeans separates the space into reasonable clusters, but in order to see what these clusters mean, we will have to do some qualitative cross-checking.
@@ -858,7 +858,7 @@ pyplot.annotate('Balsamic', xy=(4, -7), size=19, color='k')
 
 
 
-![png](output_49_1.png)
+![png](PCAvectorswithlabels.png)
 
 
 In this figure I have roughly labeled the regions by their smell, e.g. citrus, musky, etc. I arrived at these smells by cross-referencing the perfumes in each region by their "main accords" at "fragrantica.com."
