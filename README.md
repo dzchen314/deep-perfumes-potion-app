@@ -6,7 +6,7 @@ Try the app on <a href="http://www.potionfinder.com">potionfinder.com</a>
 Trained on over 140k user reviews on nearly 6k fragrances scraped from basenotes.com (pulled in 04/2018). Uses gensim doc2vec to find associations between different fragrances and keywords (e.g. floral, vanilla, etc.)
 
 
-Model training and background on potionfinder.com
+-- Model training and background on potionfinder.com --
 
 Import pandas to look at the scrapped dataset and import gensim to deploy doc2vec
 
