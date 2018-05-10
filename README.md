@@ -270,9 +270,9 @@ pprint(model_dbow.docvecs.most_similar(positive=difflib.get_close_matches('flowe
      ('Baby Phat Golden Goddess', 0.5803308486938477)]
 
 
-Overall, the models distributed memory models identify some of the same perfumes as being most similar to "flowerbomb." However, the subsampled model has lower cosine similarities across the board. It is likely that subsampling is unnecessary for our corpus, as many of the words in the reviews are adjectives that describe the perfumes, and subsampling may get rid of some essential words.
+Overall, the distributed memory models identify some of the same perfumes as being most similar to "flowerbomb." However, the subsampled model has lower cosine similarities across the board. It is likely that subsampling is unnecessary for our corpus, as many of the words in the reviews are adjectives that describe the perfumes, and subsampling may get rid of some essential words.
 
-The distributed bag of words model predicts somewhat different perfumes in association with "flowerbomb." Due to the qualitative nature of these associations, it is impossible to perform a rigorous validation of this model. Instead, we cross-validated these predictions with the "main accords" section on the website "fragrantica.com" and found that the distributed memory model without subsampling performs the best. The perfume "La Vie Est Belle" is frequently mentioned in online blog posts about perfumes similar to "flowerbomb."
+The distributed bag of words model predicts somewhat different perfumes in association with "flowerbomb." Due to the qualitative nature of these associations, it is impossible to perform a rigorous validation of this model. Instead, we cross-validated these predictions with the "main accords" section on the website "fragrantica.com" and found that the distributed memory model without subsampling performs the best. Additionally, the perfume "La Vie Est Belle" is frequently mentioned in online blog posts about perfumes similar to "flowerbomb."
 
 Here are some of the perfumes that are negatively associated with "flowerbomb."
 
@@ -314,7 +314,7 @@ pprint(model_subsample.docvecs.most_similar(negative=difflib.get_close_matches('
      ('Tom Ford Noir Anthracite', 0.2983548641204834)]
 
 
-Again, these negative associations are difficult to evaluate, but one observation that jumps out is that the perfumes predicted to be most dissimilar to "flowerbomb" are all rather masculine. This makes sense, as "flowerbomb" is a particularly feminine fragrance.
+Again, these negative associations are difficult to evaluate, but one observation that jumps out is that the perfumes predicted to be most dissimilar to "flowerbomb" are rather masculine colognes. This makes sense, as "flowerbomb" is a particularly feminine fragrance.
 
 We can also look at keyword associations, such as "floral." We find that generally the keyword associations match fairly well with the notes found in the predicted fragrances.
 
